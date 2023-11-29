@@ -63,7 +63,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CFA, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=18000, label="Grand Total=$85,920.14", size=3, color="red")+
+  annotate("label", x=6.2, y=18000, label="Grand Total=$80k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,20000))
 
@@ -80,7 +80,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Panda, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=10000, label="Grand Total=$44,678.84", size=3, color="red")+
+  annotate("label", x=6.2, y=10000, label="Grand Total=$44k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,12000))
 
@@ -96,7 +96,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=NPCo, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=6200, label="Grand Total=$23,011.56", size=3, color="red")+
+  annotate("label", x=6.2, y=6200, label="Grand Total=$20k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,10000))
 
@@ -112,7 +112,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=SBX, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=10500, label="Grand Total=$58,465.31", size=3, color="red")+
+  annotate("label", x=6.2, y=10500, label="Grand Total=$51k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,14000))
 
@@ -128,7 +128,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Barberitos, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=3500, label="Grand Total=$14,202.78", size=3, color="red")+
+  annotate("label", x=6.2, y=3500, label="Grand Total=$10k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,4000))
 
@@ -145,7 +145,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CE, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=7600, label="Grand Total=$28,623.92", size=3, color="red")+
+  annotate("label", x=6.2, y=7600, label="Grand Total=$24k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,9000))
 
@@ -161,7 +161,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CBML, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=6900, label="Grand Total=$25,100.66", size=3, color="red")+
+  annotate("label", x=6.2, y=6900, label="Grand Total=$21k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,8000))
 
@@ -178,7 +178,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CBSLC, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=6600, label="Grand Total=$23,582.27", size=3, color="red")+
+  annotate("label", x=6.2, y=6600, label="Grand Total=$20k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,7500))
 
@@ -195,7 +195,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=RedClay, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=1700, label="Grand Total=$6,506.64", size=3, color="red")+
+  annotate("label", x=6.2, y=1700, label="Grand Total=$4k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,2000))
 
@@ -212,7 +212,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Roth, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=3500, label="Grand Total=$11,576.72", size=3, color="red")+
+  annotate("label", x=6.2, y=3500, label="Grand Total=$2k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,4000))
 
@@ -229,7 +229,7 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Tate, fill=Date))+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
         panel.grid=element_line(linetype = 0, color="lightgrey"))+
-  annotate("label", x=6.2, y=4500, label="Grand Total=$18,268.85", size=3, color="red")+
+  annotate("label", x=6.2, y=4500, label="Grand Total=$20k", size=3, color="red")+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,6000))
 
