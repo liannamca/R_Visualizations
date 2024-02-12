@@ -17,7 +17,7 @@ hcl_palettes(plot=TRUE)
 #Upload Dataset
 
 library(readr)
-Analysis_Nov2_08 <- read_csv("C:/Users/lmm29377/Downloads/Analysis_Nov2_08.csv")
+Analysis_Nov2_08 <- read_csv("C:/Users/ME/Downloads/Analysis_Nov2_08.csv")
 View(Analysis_Nov2_08)
 
 #Factor Data
@@ -30,7 +30,7 @@ Analysis_Nov2_08$Date<-factor(Analysis_Nov2_08$Date, levels=c("11_02_22","11_03_
 
 #Grand Total Analysis 
 Grand_Totals<-Analysis_Nov2_08%>%
-  select(CFA:Tate) %>%
+  select(Fried_Chicken:Market) %>%
   pivot_longer(cols = everything(), names_to = "Category", values_to = "val") %>%
   group_by(Category) %>%
   summarise(Total = sum(val))
@@ -51,14 +51,14 @@ ggplot(Grand_Totals, aes(x=Category, y=Total, fill=Category))+
        y="Total Sales $")
 
 
-#Plot CFA
+#Plot 1
 ggplot(Analysis_Nov2_08, aes(x=Date, y=CFA, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="CFA Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Fried Chicken Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -68,14 +68,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CFA, fill=Date))+
   coord_cartesian(ylim=c(0,20000))
 
 
-#Panda Totals
+#Plot 2
 ggplot(Analysis_Nov2_08, aes(x=Date, y=Panda, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Panda Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Chinese Restaurant Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -84,14 +84,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Panda, fill=Date))+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,12000))
 
-#Plot NPCo
+#Plot 3
 ggplot(Analysis_Nov2_08, aes(x=Date, y=NPCo, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Niche Pizza Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Pizza Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -100,14 +100,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=NPCo, fill=Date))+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,10000))
 
-#Plot SBX
+#Plot 4
 ggplot(Analysis_Nov2_08, aes(x=Date, y=SBX, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Starbucks Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Upstairs Cafe Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -116,14 +116,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=SBX, fill=Date))+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,14000))
 
-#Plot Barberitos
+#Plot 5
 ggplot(Analysis_Nov2_08, aes(x=Date, y=Barberitos, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Barberitos Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Mexican Restaurant Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -133,14 +133,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Barberitos, fill=Date))+
   coord_cartesian(ylim=c(0,4000))
 
 
-#Plot Campus Eateries
+#Plot 6
 ggplot(Analysis_Nov2_08, aes(x=Date, y=CE, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Campus Eateries Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Store 1 Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -149,14 +149,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CE, fill=Date))+
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(ylim=c(0,9000))
 
-#Plot Einstein's Main Library
+#Plot 7
 ggplot(Analysis_Nov2_08, aes(x=Date, y=CBML, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Einstein's Main Library Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Store 2 Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -166,14 +166,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CBML, fill=Date))+
   coord_cartesian(ylim=c(0,8000))
 
 
-#Plot Einstein's Science Learning Center
+#Plot 8
 ggplot(Analysis_Nov2_08, aes(x=Date, y=CBSLC, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Einstein's Science Learning Center Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Library Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -183,14 +183,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=CBSLC, fill=Date))+
   coord_cartesian(ylim=c(0,7500))
 
 
-#Plot Red Clay
+#Plot 9
 ggplot(Analysis_Nov2_08, aes(x=Date, y=RedClay, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Red Clay Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Coffee Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -200,14 +200,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=RedClay, fill=Date))+
   coord_cartesian(ylim=c(0,2000))
 
 
-#Plot Rothenberger
+#Plot 10
 ggplot(Analysis_Nov2_08, aes(x=Date, y=Roth, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Rothenberger Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Cafe Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
@@ -217,14 +217,14 @@ ggplot(Analysis_Nov2_08, aes(x=Date, y=Roth, fill=Date))+
   coord_cartesian(ylim=c(0,4000))
 
 
-#Plot Tate
+#Plot 11
 ggplot(Analysis_Nov2_08, aes(x=Date, y=Tate, fill=Date))+
   geom_bar(stat="identity")+
   geom_text(
     aes(label = after_stat(y), group = Date), 
     stat = 'summary', fun = sum, vjust = -0.3, size=2.5)+
   scale_fill_discrete_qualitative(palette="Cold")+
-  labs(title="Tate Market Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
+  labs(title="Market Totals", subtitle="November 02- November 08, 2022", y="Total Sales $",
        caption="Week of Home Game")+
   theme(axis.text.x=element_text(size=7, angle=90, vjust=0.5, hjust=1),
         panel.background = element_rect(fill="white", color="black", linewidth = 1),
